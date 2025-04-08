@@ -74,9 +74,9 @@ export default function Slideshow({ index, images }) {
             Get Started
           </button> */}
           {/* </div> */}
-      <button className="mr-auto cursor-pointer z-[100]! bg-white/80 px-6 py-3 transition duration-700 ease-in-out rounded-sm hover:bg-black/15 border border-blue-600 text-blue-600 font-mono ">
+      {/* <button className="mr-auto cursor-pointer z-[100]! bg-white/80 px-6 py-3 transition duration-700 ease-in-out rounded-sm hover:bg-black/15 border border-blue-600 text-blue-600 font-mono ">
         Get Started
-      </button>
+      </button> */}
         </motion.div>
       </AnimatePresence>
     </div>
