@@ -57,7 +57,7 @@ export const snippets = [
         </g>
       </svg>
     ),
-    images:['/img1a.jpg','/img1b.jpg','/img1c.jpg'],
+    images:['/img1a.jpg','/img2a.jpg','/img1c.jpg','/img2.jpg'],
     title: "Advancing Preventive Healthcare Across Africa",
     content: `Mhscope Global is a global provider of preventive healthcare, clinical solutions,and food products. They offer multidisciplinary care, diagnostics,
       pharmaceuticals, and treatment under one roof. Their services support

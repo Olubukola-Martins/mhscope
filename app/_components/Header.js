@@ -3,8 +3,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Dropdown } from "antd";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,9 +18,50 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isDynamicPage = /^\/[^/]+$/.test(pathname) && pathname !== "/";
+
+  if (isDynamicPage) return null;
+
   const items = [
-    { key: "1", label: "Medical", extra: "⌘M" },
-    { key: "2", label: "Agriculture", extra: "⌘A" },
+    {
+      key: "1",
+      label: (
+        <p
+          onClick={() => {
+            const section = document.getElementById("medical");
+            section?.scrollIntoView({ behavior: "smooth" });
+          }}>
+          Medical
+        </p>
+      ),
+      extra: "⌘M",
+    },
+    {
+      key: "2",
+      label: (
+        <p
+          onClick={() => {
+            const section = document.getElementById("agriculture");
+            section?.scrollIntoView({ behavior: "smooth", block: "end" });
+          }}>
+          Agriculture
+        </p>
+      ),
+      extra: "⌘A",
+    },
+    {
+      key: "3",
+      label: (
+        <p
+          onClick={() => {
+            const section = document.getElementById("others");
+            section?.scrollIntoView({ behavior: "smooth", block: "end" });
+          }}>
+          Others
+        </p>
+      ),
+      extra: "⌘O",
+    },
   ];
 
   return (
@@ -36,7 +79,7 @@ const Header = () => {
       />
 
       <div
-        className={`flex items-center gap-x-6 text-lg lg:text-xl font-bold font-mono transition-colors duration-300 ${
+        className={`flex items-center gap-x-6 text-lg lg:text-xl font-bold font-mono transition-colors duration-300 max-lg:hidden ${
           isScrolled ? "text-black" : "text-white"
         }`}>
         <p
