@@ -14,10 +14,16 @@ const Header = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
+    const checkInitialScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
+    checkInitialScroll(); 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const isDynamicPage = /^\/[^/]+$/.test(pathname) && pathname !== "/";
 
   if (isDynamicPage) return null;
