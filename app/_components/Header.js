@@ -130,6 +130,7 @@ const Header = () => {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [animKey, setanimKey] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -248,18 +249,21 @@ const Header = () => {
         /> */}
         {isMenuOpen ? (
           <svg
+            key={animKey}
             xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
+            width="20"
+            height="20"
             viewBox="0 0 28 28"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              setanimKey((prev) => prev + 1);
+            }}
             className={` cursor-pointer ${
               isScrolled ? "text-black" : "text-white"
             }`}>
-
             <g
               fill="none"
-              stroke={isScrolled ? '#000' : '#fff'}
+              stroke={isScrolled ? "#000" : "#fff"}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="1.3">
@@ -296,17 +300,21 @@ const Header = () => {
           </svg>
         ) : (
           <svg
+            key={animKey}
             xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
+            width="40"
+            height="40"
             viewBox="0 0 28 28"
-            onClick={() => setIsMenuOpen(true)}
+            onClick={() => {
+              setIsMenuOpen(true);
+              setanimKey((prev) => prev + 1);
+            }}
             className={` cursor-pointer ${
               isScrolled ? "text-black" : "text-white"
             }`}>
             <g
               fill="none"
-              stroke={isScrolled ? '#000' : '#fff'}
+              stroke={isScrolled ? "#000" : "#fff"}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="1.3">
