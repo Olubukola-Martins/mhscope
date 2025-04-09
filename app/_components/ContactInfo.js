@@ -46,7 +46,7 @@ export const ContactInfo = () => {
           aria-label="Copy phone number">
           {copied === "phone" ? (
             <span className=" text-xs flex items-center gap-x-1">
-              Copied to clipboard!
+              Copied!
               <CheckOutlined style={{ fontSize: 12 }} />
             </span>
           ) : (
@@ -94,7 +94,7 @@ export const ContactInfo = () => {
           aria-label="Copy email address">
           {copied === "email" ? (
             <span className=" text-xs flex items-center gap-x-1">
-              Copied to clipboard!
+              Copied!
               <CheckOutlined style={{ fontSize: 12 }} />
             </span>
           ) : (
