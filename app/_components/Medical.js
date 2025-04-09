@@ -24,7 +24,7 @@ const Medical = () => {
           opacity: inView ? 1 : 0,
           scale: inView ? 1 : 0.9,
         }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className="flex flex-col gap-y-2 w-full">
         <h2 className="text-3xl font-bold text-blue-700 text-center mb-10">
           Medical Services
