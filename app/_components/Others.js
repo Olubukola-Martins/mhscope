@@ -12,7 +12,7 @@ const Others = () => {
     <div
       id="others"
       ref={ref}
-      className="px-[5%] md:px-[10%] pb-[4%] bg-gray-100 overflow-x-hidden">
+      className="px-[5%] md:px-[10%] py-[4%] bg-gray-100 overflow-x-hidden">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{

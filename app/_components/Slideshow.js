@@ -7,24 +7,24 @@ export default function Slideshow({ index, images }) {
     const i = index % images.length;
     return [
       {
-        title: "Unlocking Africa’s Potential Through Innovation",
-        content:
-          "From consulting to capacity building, we are committed to reshaping the African business landscape by equipping enterprises and individuals with world-class tools and expertise.",
-      },
-      {
-        title: "Empowering Businesses with Smart Solutions",
-        content:
-          "At MHScope Global, we drive innovation by delivering bespoke digital, business, and educational solutions that empower organizations to grow, adapt, and lead in today’s fast-changing world.",
-      },
-      {
-        title: "Your Trusted Partner in Business Transformation",
-        content:
-          "We collaborate with private and public sector organizations to implement sustainable strategies that improve productivity, performance, and profitability.",
-      },
-      {
         title: "Where Strategy Meets Innovation",
         content:
-          "MHScope Global merges deep industry knowledge with cutting-edge technologies to design and execute solutions that drive measurable results and long-term impact.",
+          "MG delivers advanced healthcare and food solutions through strategic, integrated models.",
+      },
+      {
+        title: "Unlocking Africa’s Potential Through Innovation",
+        content:
+          "We provide innovative, accessible health care to transform lives across Africa.",
+      },
+      {
+        title: "Your Trusted Partner in Agricultural Expansion",
+        content:
+          "MG drives sustainable food processing and supply for global impact.",
+      },
+      {
+        title: "Smart Solutions to Health and Nutrition Concerns",
+        content:
+          "We connect preventive care with nutrition to support healthier communities.",
       },
     ][i];
   }, [index]);

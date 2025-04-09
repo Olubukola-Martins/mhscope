@@ -7,6 +7,7 @@ import FloatContact from "./_components/FloatContact";
 import Medical from "./_components/Medical";
 import Agriculture from "./_components/Agriculture";
 import Others from "./_components/Others";
+import Chart from "./_components/Chart";
 
 const images = ["/image1.jpg", "/image2.jpg", "/image3.jpg", "/image4.jpg"];
 
@@ -28,9 +29,10 @@ export default function Home() {
         <Profile />
         <Medical />
         <Agriculture />
-        <Others/>
+        <Chart />
+        <Others />
+        <FloatContact />
       </main>
-      <FloatContact />
     </>
   );
 }
