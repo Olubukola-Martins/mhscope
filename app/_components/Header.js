@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Dropdown } from "antd";
 import { usePathname } from "next/navigation";
-import { MenuOutlined } from "@ant-design/icons";
 
 const Header = ({ setVisibleChart }) => {
   const pathname = usePathname();
@@ -133,7 +132,7 @@ const Header = ({ setVisibleChart }) => {
 
         <div className="typing-container">
           <p
-            className={`hidden md:inline-block overflow-hidden whitespace-nowrap text-base lg:text-lg border-r pr-2 
+            className={`hidden md:inline-block overflow-hidden whitespace-nowrap text-lg border-r pr-2 
     ${isScrolled ? "text-black border-black" : "text-white border-white"} 
     font-[Cursive] typing-animation`}>
             ...Wellness Starts Here...
@@ -168,12 +167,6 @@ const Header = ({ setVisibleChart }) => {
       </div>
 
       <div className="lg:hidden">
-        {/* <MenuOutlined
-          className={`text-2xl cursor-pointer ${
-            isScrolled ? "text-black" : "text-white"
-          }`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        /> */}
         {isMenuOpen ? (
           <svg
             key={animKey}
