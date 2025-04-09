@@ -17,7 +17,7 @@ export const ContactInfo = () => {
   };
 
   return (
-    <div className="space-y-2 text-sm text-gray-700">
+    <div className="space-y-2 text-sm text-gray-700 ">
       {/* Phone */}
       <div className="flex items-center gap-2">
         <svg
@@ -94,13 +94,80 @@ export const ContactInfo = () => {
           aria-label="Copy email address">
           {copied === "email" ? (
             <span className=" text-xs flex items-center gap-x-1">
-            Copied to clipboard!
-            <CheckOutlined style={{ fontSize: 12 }} />
-          </span>
-        ) : (
+              Copied to clipboard!
+              <CheckOutlined style={{ fontSize: 12 }} />
+            </span>
+          ) : (
             <CopyOutlined style={{ fontSize: 16 }} />
           )}
         </button>
+      </div>
+      <div className="flex justify-center items-center w-full">
+        {/* facebook */}
+        <a className="p-1.5! hover:bg-black/20! rounded-sm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24">
+            <path
+              fill="#1877F2"
+              d="M24 12.073C24 5.403 18.627 0 12 0S0 5.403 0 12.073c0 6.016 4.388 10.987 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.017 1.792-4.688 4.533-4.688 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.49 0-1.953.927-1.953 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.06 24 18.089 24 12.073z"
+            />
+          </svg>
+        </a>
+        {/* instagram */}
+        <a className="p-1.5! hover:bg-black/20! rounded-sm">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient
+                id="instagramGradient"
+                cx="33%"
+                cy="100%"
+                r="100%">
+                <stop offset="0%" stop-color="#feda75" />
+                <stop offset="25%" stop-color="#fa7e1e" />
+                <stop offset="50%" stop-color="#d62976" />
+                <stop offset="75%" stop-color="#962fbf" />
+                <stop offset="100%" stop-color="#4f5bd5" />
+              </radialGradient>
+            </defs>
+            <path
+              fill="url(#instagramGradient)"
+              d="M349.33,69.33H162.67C107.32,69.33,64,112.65,64,168v176c0,55.35,43.32,98.67,98.67,98.67h186.67c55.35,0,98.67-43.32,98.67-98.67V168C448,112.65,404.68,69.33,349.33,69.33ZM256,345.33A89.33,89.33,0,1,1,345.33,256,89.39,89.39,0,0,1,256,345.33ZM384,168a21.33,21.33,0,1,1,21.33-21.33A21.33,21.33,0,0,1,384,168Z"
+            />
+          </svg>
+        </a>
+        {/* twitter */}
+        <a className="p-1.5! hover:bg-black/20! rounded-sm">
+          <svg
+            width="24"
+            height="19"
+            viewBox="0 0 1100 1227"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#000000"
+              d="M832 0H1004L622 524l394 703H784L519 791 220 1227H48L457 659 80 0h438l233 402L832 0Zm-71 1112h78L320 116 241 116l520 996Z"
+            />
+          </svg>
+        </a>
+        {/* linkedin */}
+        <a className="p-1.5! hover:bg-black/20! rounded-sm">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#0077B5"
+              d="M100.28 448H7.4V148.9h92.88zm-46.44-340C24.1 108 0 83.9 0 54.1 0 24.3 24.1 0 54.1 0c30 0 54.1 24.3 54.1 54.1s-24 53.9-54.36 53.9zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448H158.5V148.9h89v40.8h1.3c12.4-23.4 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+            />
+          </svg>
+        </a>
       </div>
     </div>
   );

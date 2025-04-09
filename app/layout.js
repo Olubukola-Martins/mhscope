@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 
 const geistSans = Geist({
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} relative antialiased scroll-auto max-w-screen overflow-y-auto overflow-x-hidden  `}>
-        <Header />
         {children}
         <Footer />
       </body>

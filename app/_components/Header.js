@@ -6,7 +6,7 @@ import { Dropdown } from "antd";
 import { usePathname } from "next/navigation";
 import { MenuOutlined } from "@ant-design/icons";
 
-const Header = () => {
+const Header = ({ setVisibleChart }) => {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,6 +86,36 @@ const Header = () => {
     },
   ];
 
+  const profileItems = [
+    {
+      key: "1",
+      label: (
+        <p
+          onClick={() => {
+            const section = document.getElementById("company-profile");
+            section?.scrollIntoView({ behavior: "smooth" });
+            setIsMenuOpen(false);
+          }}>
+          Who We Are
+        </p>
+      ),
+      extra: "⌘W",
+    },
+    {
+      key: "2",
+      label: (
+        <p
+          onClick={() => {
+            setVisibleChart(true);
+            setIsMenuOpen(false);
+          }}>
+          Company's Dashboard
+        </p>
+      ),
+      extra: "⌘C",
+    },
+  ];
+
   return (
     <div
       className={`fixed top-0 left-0 w-full z-60 px-[9.5%] pt-5 pb-3 flex justify-between items-center transition-all duration-300 ${
@@ -103,7 +133,7 @@ const Header = () => {
 
         <div className="typing-container">
           <p
-            className={`hidden md:inline-block overflow-hidden whitespace-nowrap text-sm border-r pr-2 
+            className={`hidden md:inline-block overflow-hidden whitespace-nowrap text-base lg:text-lg border-r pr-2 
     ${isScrolled ? "text-black border-black" : "text-white border-white"} 
     font-[Cursive] typing-animation`}>
             ...Wellness Starts Here...
@@ -115,14 +145,11 @@ const Header = () => {
         className={`flex items-center gap-x-6 text-lg lg:text-xl font-bold font-mono transition-colors duration-300 max-lg:hidden ${
           isScrolled ? "text-black" : "text-white"
         }`}>
-        <p
-          onClick={() => {
-            const section = document.getElementById("company-profile");
-            section?.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="cursor-pointer drop-shadow-[0_0_3px_#162456] hover:text-blue-500 transition-all">
+        <Dropdown
+          menu={{ items: profileItems }}
+          className="cursor-pointer drop-shadow-[0_0_3px_#162456] hover:text-blue-500">
           Company Profile
-        </p>
+        </Dropdown>
         <Dropdown
           menu={{ items }}
           className="cursor-pointer drop-shadow-[0_0_3px_#162456] hover:text-blue-500">
@@ -263,15 +290,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="absolute top-full right-0 w-[50%] h-[90vh] transition duration-300 ease-in-out  bg-blue-900/95 shadow-2xl shadow-black">
             <div className="flex flex-col items-start p-4 text-gray-200 font-semibold">
-              <p
-                onClick={() => {
-                  const section = document.getElementById("company-profile");
-                  section?.scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-                className="cursor-pointer py-2">
+              <Dropdown
+                menu={{ items: profileItems }}
+                className="cursor-pointer py-2 w-full">
                 ~ Company Profile
-              </p>
+              </Dropdown>
+
               <Dropdown menu={{ items }} className="cursor-pointer py-2 w-full">
                 ~ Services
               </Dropdown>
