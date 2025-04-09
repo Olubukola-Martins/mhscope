@@ -12,7 +12,7 @@ const Chart = ({visible,setVisible}) => {
   });
 console.log("viis",visible)
   return (
-    <div className="border-y border-blue-800 bg-gray-100 ">
+    <div className={`border-y border-blue-800 bg-gray-100  ${visible ? '' : 'hidden'} `}>
       <div className="   overflow-x-hidden  ">
         <motion.div
           ref={ref}
