@@ -50,8 +50,8 @@ const Footer = () => {
             <p>Canberra, Australia</p>
           </div>
 
-          <div className={" flex items-center gap-2.5 ml:2 md:ml-4 lg:ml-8 "}>
-            Connect With Us On Socials:
+          <div className={" flex items-center gap-2.5  md:ml-4 lg:ml-8 "}>
+           <p className="max-[540px]:hidden"> Connect With Us On Socials:</p>
             <div className="flex justify-center items-center w-fit rounded-sm px-2.5 py-1.5 bg-black/30 cursor-pointer">
               {/* facebook */}
               <a className="p-1.5! hover:bg-white/70! rounded-sm">
