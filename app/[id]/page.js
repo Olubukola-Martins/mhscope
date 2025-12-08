@@ -65,7 +65,7 @@ const Details = () => {
         <div>
           {secondColumn.map((text, index) => (
             <p key={index} className="mb-4 text-blue-700 leading-relaxed">
-              {text.trim() + "."}
+              {text.trim() }
             </p>
           ))}
         </div>

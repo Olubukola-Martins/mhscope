@@ -70,9 +70,9 @@ const services = [
     title: "Preventive Healthcare Services",
     points: [
       "Delivery of preventive health solutions meeting international standards",
-      "Health screenings and wellness programs",
+      "Health screenings and wellness programs, including telehealth digital services and ambulance services",
       "Lifestyle and risk assessment consultations",
-      "Chronic disease management and monitoring",
+      "Chronic disease management and monitoring, including stroke clinical management services",
       "Immunization and vaccination programs",
     ],
   },
@@ -105,7 +105,7 @@ const services = [
     ],
   },
   {
-    title: "One-Stop Healthcare Clinics",
+    title: "One-Stop Shop Healthcare Clinics",
     points: [
       "Setup and operation of integrated clinics offering:",
       "Preventive and primary care",

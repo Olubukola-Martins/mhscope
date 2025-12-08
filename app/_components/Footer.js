@@ -16,6 +16,7 @@ const Footer = () => {
 
   if (isDynamicPage) return null;
 
+
   return (
     <div className="w-screen min-h-[35vh] max-h-fit bg-blue-950 px-[5%] md:px-[12%] pb-[4%] text-gray-300 flex flex-col   flex-wrap   ">
       <div className="flex items-center justify-center mx-auto flex-wrap max-[540px]:mb-4">
@@ -37,7 +38,9 @@ const Footer = () => {
         <div className="flex flex-col gap-y-3.5">
           <div className={" flex items-center gap-2.5"}>
             <EnvironmentOutlined className=" text-xl p-2 bg-black/50 rounded-[50%] font-bold h-fit" />
-            <p className="max-sm:hidden">Contact Office (Nigeria): </p>
+            <p className="max-sm:hidden">
+              MG Contact Office (Lagos, Nigeria):{" "}
+            </p>
             <p>
               44 Femi Shobowale Street, Close to Ikorodu Club,
               <br /> Aga, Ikorodu, Lagos State, Nigeria
@@ -46,12 +49,12 @@ const Footer = () => {
 
           <div className={" flex items-center gap-2.5"}>
             <EnvironmentOutlined className=" text-xl p-2 bg-black/50 rounded-[50%] font-bold -fit" />
-            <p className="max-sm:hidden">Contact Office (Overseas): </p>
+            <p className="max-sm:hidden">MG Contact Office (Overseas): </p>
             <p>Canberra, Australia</p>
           </div>
 
           <div className={" flex items-center gap-2.5  md:ml-4 lg:ml-8 "}>
-           <p className="max-[540px]:hidden"> Connect With Us On Socials:</p>
+            <p className="max-[540px]:hidden"> Connect With Us On Socials:</p>
             <div className="flex justify-center items-center w-fit rounded-sm px-2.5 py-1.5 bg-black/30 cursor-pointer">
               {/* facebook */}
               <a className="p-1.5! hover:bg-white/70! rounded-sm">
@@ -122,9 +125,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-y-3.5">
+        <div className="flex flex-col gap-y-3">
           <div className={" flex items-center gap-2.5"}>
             <PhoneOutlined className=" text-xl p-2 bg-black/50 rounded-[50%] font-bold" />
+            <p className="max-sm:hidden">Telephone No: </p>
+            <div className="flex flex-col gap-y-3">
+              <p>(+234)-809-948-9870</p>
+              <p>(+234)-706-848-5760</p>
+            </div>
+            </div>
+
+
+          <div className={" flex items-center gap-2.5"}>
+            <PhoneOutlined className=" text-xl p-2 bg-black/50 rounded-[50%] font-bold" />
+            <p className="max-sm:hidden">MG Global Contact Phone No: </p>
             <p>(+61)-405-647-444</p>
           </div>
 

@@ -3,6 +3,13 @@
 import { useState } from "react";
 import { CopyOutlined, CheckOutlined } from "@ant-design/icons";
 
+  const phoneNumbers = [
+  { number: "+61405647444", display: "(+61) 405-647-444", type: "phone-au" },
+  { number: "+2348099489870", display: "(+234) 809-948-9870", type: "phone-ng-1" },
+  { number: "+2347068485760", display: "(+234) 706-848-5760", type: "phone-ng-2" },
+];
+
+
 export const ContactInfo = () => {
   const [copied, setCopied] = useState(null);
 
@@ -19,42 +26,49 @@ export const ContactInfo = () => {
   return (
     <div className="space-y-2 text-sm text-gray-700 ">
       {/* Phone */}
-      <div className="flex items-center gap-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 48 48">
-          <path
-            fill="#2196f3"
-            d="M26.4 33.9s4-2.6 4.8-3s1.7-.6 2.2-.2c.8.5 7.5 4.9 8.1 5.3s.8 1.5.1 2.6c-.8 1.1-4.3 5.5-5.8 5.4c-1.5 0-8.4.4-20.3-11.4C3.6 20.7 4 13.8 4 12.3s4.3-5.1 5.4-5.8c1.1-.8 2.2-.5 2.6.1s4.8 7.3 5.3 8.1c.3.5.2 1.4-.2 2.2s-3 4.8-3 4.8s.7 2.8 5 7.2c4.4 4.3 7.3 5 7.3 5"
-          />
-          <g fill="#3f51b5">
-            <path d="M35 9H25v4h10c1.1 0 2 .9 2 2v10h4V15c0-3.3-2.7-6-6-6" />
-            <path d="m28 16l-6.7-5L28 6z" />
-          </g>
-        </svg>
+      <div className="space-y-3">
+        {phoneNumbers.map(({ number, display, type }) => (
+          <div key={type} className="flex items-center gap-2">
+            {/* SVG ICON (kept exactly as provided) */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 48 48">
+              <path
+                fill="#2196f3"
+                d="M26.4 33.9s4-2.6 4.8-3s1.7-.6 2.2-.2c.8.5 7.5 4.9 8.1 5.3s.8 1.5.1 2.6c-.8 1.1-4.3 5.5-5.8 5.4c-1.5 0-8.4.4-20.3-11.4C3.6 20.7 4 13.8 4 12.3s4.3-5.1 5.4-5.8c1.1-.8 2.2-.5 2.6.1s4.8 7.3 5.3 8.1c.3.5.2 1.4-.2 2.2s-3 4.8-3 4.8s.7 2.8 5 7.2c4.4 4.3 7.3 5 7.3 5"
+              />
+              <g fill="#3f51b5">
+                <path d="M35 9H25v4h10c1.1 0 2 .9 2 2v10h4V15c0-3.3-2.7-6-6-6" />
+                <path d="m28 16l-6.7-5L28 6z" />
+              </g>
+            </svg>
 
-        <a
-          href="tel:+61405647444"
-          className="  text-blue-950! hover:text-cyan-800! text-sm hover:underline">
-          (+61)405-647-444
-        </a>
-        <button
-          onClick={() => handleCopy("+61405647444", "phone")}
-          className="text-gray-500 hover:text-blue-600"
-          aria-label="Copy phone number">
-          {copied === "phone" ? (
-            <span className=" text-xs flex items-center gap-x-1">
-              Copied!
-              <CheckOutlined style={{ fontSize: 12 }} />
-            </span>
-          ) : (
-            <CopyOutlined style={{ fontSize: 16 }} />
-          )}
-        </button>
+            {/* PHONE NUMBER TEXT */}
+            <a
+              href={`tel:${number}`}
+              className="text-blue-950 hover:text-cyan-800 text-sm hover:underline">
+              {display}
+            </a>
+
+            {/* COPY BUTTON */}
+            <button
+              onClick={() => handleCopy(number, type)}
+              className="text-gray-500 hover:text-blue-600"
+              aria-label="Copy phone number">
+              {copied === type ? (
+                <span className="text-xs flex items-center gap-x-1">
+                  Copied!
+                  <CheckOutlined style={{ fontSize: 12 }} />
+                </span>
+              ) : (
+                <CopyOutlined style={{ fontSize: 16 }} />
+              )}
+            </button>
+          </div>
+        ))}
       </div>
-
       {/* Email */}
       <div className="flex items-center gap-2">
         <svg
@@ -129,11 +143,11 @@ export const ContactInfo = () => {
                 cx="33%"
                 cy="100%"
                 r="100%">
-                <stop offset="0%" stop-color="#feda75" />
-                <stop offset="25%" stop-color="#fa7e1e" />
-                <stop offset="50%" stop-color="#d62976" />
-                <stop offset="75%" stop-color="#962fbf" />
-                <stop offset="100%" stop-color="#4f5bd5" />
+                <stop offset="0%" stopColor="#feda75" />
+                <stop offset="25%" stopColor="#fa7e1e" />
+                <stop offset="50%" stopColor="#d62976" />
+                <stop offset="75%" stopColor="#962fbf" />
+                <stop offset="100%" stopColor="#4f5bd5" />
               </radialGradient>
             </defs>
             <path

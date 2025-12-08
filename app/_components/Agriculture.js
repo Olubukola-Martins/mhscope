@@ -58,12 +58,12 @@ const agriculturalServices = [
     ],
   },
   {
-    title: "Agricultural Production Services (Crop Production)",
+    title: "Agricultural Production Services (Animal and Crop Food Supply & Distribution Services)",
     points: [
-      "Commercial-scale crop farming (e.g., grains, vegetables, legumes)",
-      "Implementation of modern agricultural technologies and techniques",
+      "Commercial-scale animal and crop farming (e.g. cattles, sheeps, goats, grains, vegetables, legumes e.t.c)",
+      "Implementation of modern agricultural technologies and advanced animal & crop production techniques",
       "Sustainable and organic crop production practices",
-      "Processing and packaging of agricultural produce for distribution",
+      "Processing and packaging of agricultural produce — including cassava, cattle, sheep, goats, and other nutritionally valuable crops — for supply and distribution",
       "Integration of agriculture with food security and nutrition initiatives",
     ],
   },
