@@ -79,11 +79,11 @@ const Footer = () => {
                       cx="33%"
                       cy="100%"
                       r="100%">
-                      <stop offset="0%" stop-color="#feda75" />
-                      <stop offset="25%" stop-color="#fa7e1e" />
-                      <stop offset="50%" stop-color="#d62976" />
-                      <stop offset="75%" stop-color="#962fbf" />
-                      <stop offset="100%" stop-color="#4f5bd5" />
+                      <stop offset="0%" stopColor="#feda75" />
+                      <stop offset="25%" stopColor="#fa7e1e" />
+                      <stop offset="50%" stopColor="#d62976" />
+                      <stop offset="75%" stopColor="#962fbf" />
+                      <stop offset="100%" stopColor="#4f5bd5" />
                     </radialGradient>
                   </defs>
                   <path

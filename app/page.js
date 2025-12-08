@@ -10,7 +10,7 @@ import Others from "./_components/Others";
 import Chart from "./_components/Chart";
 import Header from "./_components/Header";
 
-const images = ["/image1.jpg", "/image2.jpg", "/image3.jpg", "/image4.jpg"];
+const images = ["/image1.jpg",  "/image3.jpg", "/image2.jpg", "/image4.jpg"];
 
 export default function Home() {
   const [index, setIndex] = useState(0);
