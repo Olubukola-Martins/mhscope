@@ -148,6 +148,11 @@ const Footer = () => {
           </div>
 
           <div className={" flex items-center gap-2.5"}>
+            <MailOutlined className=" text-xl p-2 bg-black/50 rounded-[50%] font-bold" />
+            <p>mhscopenig@gmail.com</p>
+          </div>
+
+          <div className={" flex items-center gap-2.5"}>
             <GlobalOutlined className=" text-xl p-2 bg-black/50 rounded-[50%] font-bold" />
             <p>www.mhscope.com</p>
           </div>
